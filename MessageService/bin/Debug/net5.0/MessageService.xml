@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MessageService</name>
+    </assembly>
+    <members>
+        <member name="T:MessageService.Controllers.MessengerController">
+            <summary>
+            Класс контроллера приложения.
+            </summary>
+        </member>
+        <member name="P:MessageService.Controllers.MessengerController.messages">
+            <summary>
+            Свойство для получения списка сообщений из файла.
+            </summary>
+        </member>
+        <member name="P:MessageService.Controllers.MessengerController.users">
+            <summary>
+            Свойство для получения списка пользователей из файла.
+            </summary>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.SerializeMessages(System.Collections.Generic.List{MessageService.Models.MessageInfo})">
+            <summary>
+            Cериализация нового списка сообщений.
+            </summary>
+            <param name="newMessages">Новый список сообщений.</param>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.SerializeUsers(System.Collections.Generic.List{MessageService.Models.User})">
+            <summary>
+            Сериализация нового списка пользователей.
+            </summary>
+            <param name="newUsers">Новый список пользователей.</param>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GetAllUsers(System.Int32,System.Int32)">
+            <summary>
+            Получение спика пользователей.
+            </summary>
+            <param name="limit">Максимальная длина списка.</param>
+            <param name="offset">Номер пользователя, начиная с которого необходимо получать информацию.</param>
+            <returns>Список пользователей или сообщение об ошибке.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GetUserByEmail(System.String)">
+            <summary>
+            Получение информации о пользователю по email.
+            </summary>
+            <param name="email">Email пользователя.</param>
+            <returns>Информация о пользователе или сообщение об ошибке.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GetMessagesBySenderAndReciever(System.String,System.String)">
+            <summary>
+            Получение спика сообщений между отправителем и получателем.
+            </summary>
+            <param name="senderId">Id отправителя.</param>
+            <param name="recieverId">Id получателя.</param>
+            <returns>Список сообщения или информация об ошибке.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GetMessagesBySender(System.String)">
+            <summary>
+            Получение сообщений отправленных каким-то пользователем.
+            </summary>
+            <param name="senderId">Id отправителя.</param>
+            <returns>Список сообщений или информация об ошибке.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GetMessagesByReciever(System.String)">
+            <summary>
+            Получение сообщений полученных каким-то пользователем.
+            </summary>
+            <param name="recieverId">Id получателя.</param>
+            <returns>Список сообщений или информация об ошибке.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.AddUser(System.String,System.String)">
+            <summary>
+            Регистрация пользователя.
+            </summary>
+            <param name="email">Email пользователя.</param>
+            <param name="username">Имя пользователя.</param>
+            <returns>Информация об успешном или неуспешном выполнении.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.SendMessage(System.String,System.String,System.String,System.String)">
+            <summary>
+            Отправление сообщения.
+            </summary>
+            <param name="subject">Тема сообщения.</param>
+            <param name="message">Текст сообщения.</param>
+            <param name="senderId">Id отправителя.</param>
+            <param name="recieverId">Id получателя.</param>
+            <returns>Информация об успешном или неуспешном выполнении.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GenerateData">
+            <summary>
+            Генерация списка пользователей и сообщений.
+            </summary>
+            <returns>Информация об успешном или неуспешном выполнении.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GenerateUsers">
+            <summary>
+            Генерация списка пользователей.
+            </summary>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GenerateName">
+            <summary>
+            Генерация имени.
+            </summary>
+            <returns>Имя.</returns>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GenerateMessages">
+            <summary>
+            Генерация списка сообщений.
+            </summary>
+        </member>
+        <member name="M:MessageService.Controllers.MessengerController.GenerateMessage">
+            <summary>
+            Генерация сообщения.
+            </summary>
+            <returns>Сообщение.</returns>
+        </member>
+        <member name="T:MessageService.Models.MessageInfo">
+            <summary>
+            Класс, содержащий информацию об отправленных сообщениях.
+            </summary>
+        </member>
+        <member name="P:MessageService.Models.MessageInfo.Subject">
+            <summary>
+            Тема сообщения.
+            </summary>
+        </member>
+        <member name="P:MessageService.Models.MessageInfo.Message">
+            <summary>
+            Текст сообщения.
+            </summary>
+        </member>
+        <member name="P:MessageService.Models.MessageInfo.SenderID">
+            <summary>
+            Id отправителя.
+            </summary>
+        </member>
+        <member name="P:MessageService.Models.MessageInfo.RecieverID">
+            <summary>
+            Id получателя.
+            </summary>
+        </member>
+        <member name="T:MessageService.Models.User">
+            <summary>
+            Класс, содержащий информацию о зарегестрированном пользователе.
+            </summary>
+        </member>
+        <member name="P:MessageService.Models.User.Username">
+            <summary>
+            Имя пользователя.
+            </summary>
+            
+        </member>
+        <member name="P:MessageService.Models.User.Email">
+            <summary>
+            Email пользователя (Id).
+            </summary>
+        </member>
+    </members>
+</doc>
