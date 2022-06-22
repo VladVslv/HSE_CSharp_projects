@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DrawingFractals/1.0.0": {
+        "dependencies": {
+          "FractalsLib": "1.0.0"
+        },
+        "runtime": {
+          "DrawingFractals.dll": {}
+        }
+      },
+      "FractalsLib/1.0.0": {
+        "runtime": {
+          "FractalsLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DrawingFractals/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FractalsLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

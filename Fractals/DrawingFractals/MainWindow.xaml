@@ -1,0 +1,24 @@
+﻿<Window x:Class="DrawingFractals.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrawingFractals"
+        mc:Ignorable="d"
+        Title="Фракталы" Height="450" Width="800" Loaded="MainWindowLoaded">
+    <Grid>
+        <Canvas x:Name="mainCanvas" Margin="10,50,10,10" />
+        <ComboBox x:Name="FractalComboBox" Margin="10,10,457,0" VerticalAlignment="Top" Height="20">
+            <ComboBoxItem Content="Обдуваемое ветром фрактальное дерево" PreviewMouseLeftButtonDown="TreeButtonClick"/>
+            <ComboBoxItem Content="Кривая Коха" PreviewMouseLeftButtonDown="KochSnowFlakeButtonClick"/>
+            <ComboBoxItem Content="Ковёр Серпинского" PreviewMouseLeftButtonDown="SierpinskiCarpetButtonClick"/>
+            <ComboBoxItem Content="Треугольник Серпинского" PreviewMouseLeftButtonDown="SierpinskiTriangleButtonClick"/>
+            <ComboBoxItem Content="Множество Кантора" PreviewMouseLeftButtonDown="CantorSetButtonClick"/>
+        </ComboBox>
+        <Button Content="Глубина рекурсии" HorizontalAlignment="Right" Margin="0,10,348,0" VerticalAlignment="Top" Click="RecursionDepthButtonClick" Grid.Column="1"/>
+        <Button Content="Начальный цвет" HorizontalAlignment="Right" Margin="0,10,249,0" VerticalAlignment="Top" Click="StartingColorButtonClick" Grid.Column="1"/>
+        <Button Content="Сохранить изображение" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Click="SaveImageButtonClick" Grid.Column="1"/>
+        <Button Content="Конечный цвет" HorizontalAlignment="Right" Margin="0,10,155,0" VerticalAlignment="Top" Click="EndingColorButtonClick" Grid.Column="1"/>
+
+    </Grid>
+</Window>

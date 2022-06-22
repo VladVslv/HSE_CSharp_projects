@@ -1,0 +1,20 @@
+﻿<Window x:Class="DrawingFractals.TreeSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DrawingFractals"
+        mc:Ignorable="d"
+        Title="Параметры фрактального дерева" Height="210" Width="420" MinHeight="210" MinWidth="420">
+    <Grid>
+        <TextBlock x:Name="KoefTextBox" HorizontalAlignment="Left" Margin="10,10,0,0" Text="Коэффицент отношения длин отрезков: 0.5" TextWrapping="Wrap" VerticalAlignment="Top" Width="290" />
+        <TextBlock x:Name="FirstAngleTextBox" HorizontalAlignment="Left" Margin="10,56,0,0" Text="Угол наклона первого отрезка(в градусах): 15" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"/>
+        <TextBlock x:Name="SecondAngleTextBox" HorizontalAlignment="Left" Margin="10,102,0,0" Text="Угол наклона второго отрезка (в градусах):15" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"/>
+        <Slider x:Name="KoefSlider" Margin="10,33,10,0" VerticalAlignment="Top" Minimum="0.5" Maximum="0.75" IsSnapToTickEnabled="True" TickFrequency="0.01" ValueChanged="KoefSliderValueChanged"/>
+        <Slider x:Name="FirstAngleSlider" Margin="10,79,10,0" VerticalAlignment="Top" Minimum="15" Maximum="45" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="FirstAngleSliderValueChanged"/>
+        <Slider x:Name="SecondAngleSlider" Margin="10,125,10,0" VerticalAlignment="Top" Minimum="15" Maximum="45" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="SecondAngleSliderValueChanged"/>
+        <Button Content="Отменить изменения" HorizontalAlignment="Left" Margin="10,148,0,0" VerticalAlignment="Top" Click="CancelButtonClick"/>
+        <Button Content="Применить изменения" HorizontalAlignment="Right" Margin="0,148,10,0" VerticalAlignment="Top" Click="OkButtonClick"/>
+
+    </Grid>
+</Window>
